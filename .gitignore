@@ -265,3 +265,4 @@ pip-log.txt
 /atk/atkmm/private/action_p.h
 /atk/atkmm/private/document_p.h
 /atk/atkmm/private/noopobject_p.h
+/atk/atkmm/wrap_init.cc

@@ -252,3 +252,16 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+/atk/atkmm/value.h
+/atk/atkmm/action.cc
+/atk/atkmm/action.h
+/atk/atkmm/document.cc
+/atk/atkmm/document.h
+/atk/atkmm/noopobject.cc
+/atk/atkmm/noopobject.h
+/atk/atkmm/value.cc
+/atk/atkmm/private/value_p.h
+/atk/atkmm/private/action_p.h
+/atk/atkmm/private/document_p.h
+/atk/atkmm/private/noopobject_p.h

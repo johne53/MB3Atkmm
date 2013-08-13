@@ -2,7 +2,7 @@
 <VisualStudioPropertySheet
 	ProjectType="Visual C++"
 	Version="8.00"
-	Name="glibmm"
+	Name="atkmm"
 	>
 	<UserMacro
 		Name="DllPrefix"
@@ -19,6 +19,14 @@
 	<UserMacro
 		Name="GlibmmBuildRootFolder"
 		Value="@GlibmmBuildRootFolder@"
+	/>
+	<UserMacro
+		Name="GtkmmBuildRootFolder"
+		Value="@GtkmmBuildRootFolder@"
+	/>
+	<UserMacro
+		Name="PangommBuildRootFolder"
+		Value="@PangommBuildRootFolder@"
 	/>
 	<UserMacro
 		Name="GenericIncludeFolder"

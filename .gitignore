@@ -311,3 +311,5 @@ pip-log.txt
 /atk/atkmm/private/text_p.h
 
 /build/msvc/atkmm.vsprops
+
+/atk/atkmm.rc

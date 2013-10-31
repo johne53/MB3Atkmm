@@ -58,4 +58,5 @@ process_file ("atk/atkmmconfig.h");
 my $command=join(' ',@ARGV);
 if ($command eq -buildall) {
 	process_file ("build/msvc/atkmm.vsprops");
+	process_file ("atk/atkmm.rc");
 }

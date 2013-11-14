@@ -10,7 +10,6 @@ $micro = 7;
 $binary_age = 2207;
 $interface_age = 0;
 $current_minus_age = 0;
-$atkmm_module_name = "libatkmm-2.22";
 $exec_prefix = "lib";
 
 sub process_file
@@ -33,7 +32,6 @@ sub process_file
 	    s/\@PERL@/$perl_path/g;
 	    s/\@prefix@/$exec_prefix/g;
 	    s/\@exec_prefix@/$exec_prefix/g;
-	    s/\@datarootdir@/$data_root_dir/g;
 	    s/\@M4@/$m4_path/g;
 	    s/\@libdir@/$generic_library_folder/g;
 	    s/\@GlibBuildRootFolder@/$glib_build_root_folder/g;
@@ -49,11 +47,24 @@ sub process_file
 	    s/\@Debug32TargetFolder@/$debug32_target_folder/g;
 	    s/\@Release32TargetFolder@/$release32_target_folder/g;
 	    s/\@TargetSxSFolder@/$target_sxs_folder/g;
+	    s/\@includedir@/$generic_include_folder/g;
+	    s/\@ATKMM_API_VERSION\@/$api_version/g;
 	    print OUTPUT;
 	}
 }
 
+my $command=join(' ',@ARGV);
+
+if (-1 != index($command, "-X64")) {
+	$atkmm_module_name = "libatkmm64-2.0";
+	$api_version = "64-2.0-0";
+} else {
+	$atkmm_module_name = "libatkmm32-2.0";
+	$api_version = "32-2.0-0";
+}
+
 process_file ("atk/atkmmconfig.h");
+process_file ("atk/atkmm.pc");
 
 my $command=join(' ',@ARGV);
 if ($command eq -buildall) {

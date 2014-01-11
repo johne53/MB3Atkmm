@@ -36,4 +36,3 @@ text.cc
 text.h
 value.cc
 value.h
-wrap_init.cc

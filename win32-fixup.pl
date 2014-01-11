@@ -36,6 +36,7 @@ sub process_file
 	    s/\@libdir@/$generic_library_folder/g;
 	    s/\@GlibBuildRootFolder@/$glib_build_root_folder/g;
 	    s/\@GlibmmBuildRootFolder@/$glibmm_build_root_folder/g;
+	    s/\@AtkmmBuildRootFolder@/$atkmm_build_root_folder/g;
 	    s/\@GtkmmBuildRootFolder@/$gtkmm_build_root_folder/g;
 	    s/\@PangommBuildRootFolder@/$pangomm_build_root_folder/g;
 	    s/\@GenericIncludeFolder@/$generic_include_folder/g;

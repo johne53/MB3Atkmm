@@ -21,6 +21,10 @@
 		Value="@GlibmmBuildRootFolder@"
 	/>
 	<UserMacro
+		Name="AtkmmBuildRootFolder"
+		Value="@AtkmmBuildRootFolder@"
+	/>
+	<UserMacro
 		Name="GtkmmBuildRootFolder"
 		Value="@GtkmmBuildRootFolder@"
 	/>

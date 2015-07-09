@@ -9,6 +9,7 @@ _CONV_ENUM(Atk,StateType)
 _CONV_ENUM(Atk,CoordType)
 _CONV_ENUM(Atk,TextBoundary)
 _CONV_ENUM(Atk,TextClipType)
+_CONV_ENUM(Atk,TextGranularity)
 
 
 _CONVERSION(`AtkObject*',`Glib::RefPtr<Atk::Object>',Glib::wrap($3))
@@ -39,6 +40,8 @@ _CONVERSION(`GIOChannel*',`Glib::RefPtr<Glib::IOChannel>',Glib::wrap($3))
 
 _CONVERSION(`Rectangle&', `AtkTextRectangle*', `&($3)')
 _CONVERSION(`const Rectangle&', `AtkTextRectangle*', `const_cast<AtkTextRectangle*>(&($3))')
+
+_CONVERSION(`AtkRange*',`Range',Glib::wrap($3))
 
 
 

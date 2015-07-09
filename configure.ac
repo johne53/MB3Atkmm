@@ -19,7 +19,7 @@
 # pkg-config name as before and is meant to be binary compatible.  Thus for the
 # time being, the version number cannot be brought in line with ATK, since that
 # would break compatibility.
-AC_INIT([atkmm], [2.22.7], [https://bugzilla.gnome.org/enter_bug.cgi?product=atkmm],
+AC_INIT([atkmm], [2.23.1], [https://bugzilla.gnome.org/enter_bug.cgi?product=atkmm],
         [atkmm], [http://www.gtkmm.org/])
 AC_PREREQ([2.59])
 
@@ -48,7 +48,7 @@ AC_PROG_CXX
 AC_DISABLE_STATIC
 LT_INIT([win32-dll])
 
-AC_SUBST([ATKMM_MODULES], ['atk >= 1.12 glibmm-2.4 >= 2.36'])
+AC_SUBST([ATKMM_MODULES], ['atk >= 1.16 glibmm-2.4 >= 2.45.3'])
 PKG_CHECK_MODULES([ATKMM], [$ATKMM_MODULES])
 
 MM_PKG_CONFIG_SUBST([GTHREAD_CFLAGS], [--cflags-only-other gthread-2.0])
@@ -64,7 +64,7 @@ MM_ARG_WITH_TAGFILE_DOC([glibmm-2.4.tag], [glibmm-2.4])
 AC_LANG([C++])
 MM_ARG_ENABLE_WARNINGS([ATKMM_WXXFLAGS],
                        [-Wall],
-                       [-pedantic -Wall -Wextra -Wno-long-long -Wno-error=deprecated-declarations -DGSEAL_ENABLE],
+                       [-pedantic -Wall -Wextra -Wno-long-long -DGSEAL_ENABLE],
                        [G ATK GLIBMM])
 
 AC_CONFIG_FILES([Makefile

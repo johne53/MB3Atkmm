@@ -3,11 +3,11 @@
 
 require "../local-paths.lib";
 
-$atkmm_version = "2.22.7";
+$atkmm_version = "2.23.1";
 $major = 2;
-$minor = 22;
-$micro = 7;
-$binary_age = 2207;
+$minor = 23;
+$micro = 1;
+$binary_age = 2301;
 $interface_age = 0;
 $current_minus_age = 0;
 $exec_prefix = "lib";

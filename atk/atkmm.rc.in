@@ -1,0 +1,45 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource."
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+#include <winver.h>
+
+VS_VERSION_INFO VERSIONINFO
+  FILEVERSION @ATKMM_MAJOR_VERSION@,@ATKMM_MINOR_VERSION@,@ATKMM_MICRO_VERSION@,@ATKMM_INTERFACE_AGE@
+  PRODUCTVERSION @ATKMM_MAJOR_VERSION@,@ATKMM_MINOR_VERSION@,@ATKMM_MICRO_VERSION@,@ATKMM_INTERFACE_AGE@
+  FILEFLAGSMASK 0
+  FILEFLAGS 0
+  FILEOS VOS__WINDOWS32
+  FILETYPE VFT_DLL
+  FILESUBTYPE VFT2_UNKNOWN
+  BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+      BLOCK "040904B0"
+      BEGIN
+	VALUE "CompanyName", "The gtkmm development team (see AUTHORS)"
+	VALUE "FileDescription", "The official C++ wrapper for ATK"
+	VALUE "FileVersion", "@PACKAGE_VERSION@.0"
+	VALUE "InternalName", "@ATKMM_MODULE_NAME@-@LT_CURRENT_MINUS_AGE@"
+	VALUE "LegalCopyright", "Distribution is under the LGPL (see COPYING)"
+	VALUE "OriginalFilename", "libatkmm-2.0-@LT_CURRENT_MINUS_AGE@.dll"
+	VALUE "ProductName", "atkmm"
+	VALUE "ProductVersion", "@ATKMM_MAJOR_VERSION@, @ATKMM_MINOR_VERSION@, @ATKMM_MICRO_VERSION@, @ATKMM_INTERFACE_AGE@"
+      END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+      VALUE "Translation", 0x409, 1200
+    END
+  END
+
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\0"
+END

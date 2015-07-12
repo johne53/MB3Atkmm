@@ -9,7 +9,6 @@ implementor_p.h
 noopobject_p.h
 object_p.h
 objectaccessible_p.h
-range_p.h
 relation_p.h
 relationset_p.h
 selection_p.h

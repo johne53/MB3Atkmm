@@ -20,8 +20,6 @@ object.cc
 object.h
 objectaccessible.cc
 objectaccessible.h
-range.cc
-range.h
 relation.cc
 relation.h
 relationset.cc

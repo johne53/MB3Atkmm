@@ -19,7 +19,7 @@
 # pkg-config name as before and is meant to be binary compatible.  Thus for the
 # time being, the version number cannot be brought in line with ATK, since that
 # would break compatibility.
-AC_INIT([atkmm], [2.23.1], [https://bugzilla.gnome.org/enter_bug.cgi?product=atkmm],
+AC_INIT([atkmm], [2.23.2], [https://bugzilla.gnome.org/enter_bug.cgi?product=atkmm],
         [atkmm], [http://www.gtkmm.org/])
 AC_PREREQ([2.59])
 
@@ -33,7 +33,7 @@ m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES])
 AM_MAINTAINER_MODE
 AC_ARG_VAR([ACLOCAL_FLAGS], [aclocal flags, e.g. -I <macro dir>])
 
-MM_PREREQ([0.9.5])
+MM_PREREQ([0.9.8])
 MM_INIT_MODULE([atkmm-1.6])
 
 # Copy the mm-common .pl scripts into docs/,
@@ -45,10 +45,12 @@ MM_CONFIG_DOCTOOL_DIR([doc])
 AC_SUBST([ATKMM_SO_VERSION], [2:0:1])
 
 AC_PROG_CXX
+MM_AX_CXX_COMPILE_STDCXX_11([noext],[mandatory])
+
 AC_DISABLE_STATIC
 LT_INIT([win32-dll])
 
-AC_SUBST([ATKMM_MODULES], ['atk >= 1.16 glibmm-2.4 >= 2.45.3'])
+AC_SUBST([ATKMM_MODULES], ['atk >= 1.16 glibmm-2.4 >= 2.45.31'])
 PKG_CHECK_MODULES([ATKMM], [$ATKMM_MODULES])
 
 MM_PKG_CONFIG_SUBST([GTHREAD_CFLAGS], [--cflags-only-other gthread-2.0])

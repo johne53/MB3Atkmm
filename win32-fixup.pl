@@ -64,11 +64,11 @@ if (-1 != index($command, "-X64")) {
 	$api_version = "32-2.0-0";
 }
 
-process_file ("atk/atkmmconfig.h");
 process_file ("atk/atkmm.pc");
 
 my $command=join(' ',@ARGV);
 if ($command eq -buildall) {
+	process_file ("atk/atkmmconfig.h");
 	process_file ("build/msvc/atkmm.vsprops");
 	process_file ("atk/atkmm.rc");
 }
